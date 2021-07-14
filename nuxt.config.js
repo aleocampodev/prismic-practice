@@ -46,7 +46,10 @@ export default {
   
   prismic: {
     endpoint: 'https://prismicpractice.cdn.prismic.io/api/v2',
-    modern: true
+    modern: true,
+    apiOptions:{
+      accessToken:'MC5ZT253V1JJQUFDOEExR1JP.UO-_ve-_vWEReQ47Te-_vWkm77-977-9fSwY77-977-977-9cu-_vTLvv73vv71477-9CyxII3M'
+    }
     /* see configuration for more */
   },
 
@@ -68,6 +71,7 @@ export default {
       }
     }
   },
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
