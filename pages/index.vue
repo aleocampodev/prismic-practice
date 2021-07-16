@@ -1,8 +1,8 @@
 <template>
  <div>
    hola
-   <div>
-    <h1 v-text="data.title[0].text"></h1>
+
+    <!--<h1 v-text="data.title[0].text"></h1>
     <p v-text="data.text[0].text"></p>
     <div>{{data.body[0].items[0].image.url}}</div>
     <img :src="data.image.url"/>
@@ -15,34 +15,18 @@
         transition="fade-transition"
       ></v-carousel-item>
     </v-carousel>
-  </div>
+    <prismic-rich-text :field="slice.primary.description" />
+  </div>-->
  </div>
 </template>
 
 <script>
 export default {
   async asyncData({$prismic}){
-    const  data  = await $prismic.api.getSingle('oso_panda');
-    console.log("Hola soy la data", data)
+    const  {data } = await $prismic.api.getSingle('simplepage');
+    console.log( JSON.stringify(data.body[0].items[1]))
      return  data 
-  },
-  data () {
-      return {
-        items: [
-          {
-            src:'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-        ],
-      }
-    }
+  }
 }
 </script>
+

@@ -1,0 +1,8 @@
+[
+  {
+    "id": "slider",
+    "name": "Slider",
+    "repeatable": true,
+    "value": "slider.json"
+  }
+]

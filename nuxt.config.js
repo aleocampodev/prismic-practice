@@ -36,7 +36,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    '@nuxtjs/prismic'
+    '@nuxtjs/prismic',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
