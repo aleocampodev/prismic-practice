@@ -1,7 +1,9 @@
 <template>
  <div>
    hola
-
+  <pre>
+    {{JSON.stringify(data.body[0].items)}}
+  </pre>
     <!--<h1 v-text="data.title[0].text"></h1>
     <p v-text="data.text[0].text"></p>
     <div>{{data.body[0].items[0].image.url}}</div>
@@ -24,8 +26,8 @@
 export default {
   async asyncData({$prismic}){
     const  {data } = await $prismic.api.getSingle('simplepage');
-    console.log( JSON.stringify(data.body[0].items[1]))
-     return  data 
+    console.log( JSON.stringify("Hola", data.body))
+     return  {data} 
   }
 }
 </script>
